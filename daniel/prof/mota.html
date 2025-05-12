@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SENAI 302 DIMP</title>
+    <link rel="stylesheet" href="paulo.css" />
+  </head>
+  <body>
+    <header>
+      <h1>SENAI 302 DIMP</h1>
+    </header>
+
+    <main>
+      <div class="welcome-section">
+        <h2>Bem vindo, Exemplo!</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="buttons-container">
+        <div class="button-group">
+          <span>Gerar FIAP</span>
+          <button id="gerarFiapBtn" class="circle-button">
+            <div class="plus-icon">+</div>
+            <div class="fiap-icon">
+              <img src="papel.svg" alt="encaminhamento" />
+            </div>
+          </button>
+        </div>
+
+        <div class="button-group">
+          <span>Gerar Encaminhamento</span>
+          <button id="gerarEncaminhamentoBtn" class="circle-button">
+            <div class="plus-icon">+</div>
+            <div class="encaminhamento-icon">
+              <img src="papel.svg" alt="encaminhamento" />
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table id="pedidosTable">
+          <thead>
+            <tr>
+              <th>Pedido</th>
+              <th>Aluno</th>
+              <th>Turma</th>
+              <th>Data</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>FIAP</td>
+              <td>nicolas bota</td>
+              <td>ADS1</td>
+              <td>amanha</td>
+              <td>Encerrado</td>
+            </tr>
+            <tr>
+              <td>Encaminhamento</td>
+              <td>poavio</td>
+              <td>oi</td>
+              <td>ontem</td>
+              <td>Pendente</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="igor.js"></script>
+  </body>
+</html>
