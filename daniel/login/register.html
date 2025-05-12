@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SENAI Encaminhamento - Registro</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a href="index.html">SENAI encaminhamento</a>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Início</a>
+        </li>
+        <li class="nav-item">
+          <a href="login.html" class="nav-link">Login</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="auth-container">
+      <div class="auth-card">
+        <h2>Criar Conta</h2>
+        <div
+          id="error-message"
+          class="error-message"
+          style="display: none"
+        ></div>
+        <div id="success-message" class="success-message" style="display: none">
+          Conta criada. Aguarde, você está sendo redirecionado para login...
+        </div>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input type="password" id="password" required />
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirmar Senha</label>
+            <input type="password" id="confirmPassword" required />
+          </div>
+          <button type="submit" class="btn-primary">Registrar</button>
+        </form>
+        <div class="auth-footer">
+          <p>Já possui uma conta? <a href="login.html">Faça login</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
