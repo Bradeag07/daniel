@@ -1,80 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SENAI 302 DIMP - Encaminhamento</title>
-    <link rel="stylesheet" href="encaminhamento.css">
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>SENAI 302 DIMP</h1>
-            <a href="#" class="inicio">Início</a>
-        </div>
-        
-        <form id="encaminhamentoForm">
-            <div class="form-group">
-                <label for="nome">NOME DO(A) ALUNO(A):</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
-
-            <div class="form-group">
-                <label for="turma">TURMA:</label>
-                <input type="text" id="turma" name="turma">
-            </div>
-
-            <div class="form-group">
-                <label for="nascimento">DATA DE NASCIMENTO:</label>
-                <input type="date" id="nascimento" name="nascimento" 
-                       placeholder="Se for de menor" 
-                       title="Se for de menor">
-            </div>
-
-            <div class="form-group motivo-encaminhamento">
-                <h3>MOTIVO DO ENCAMINHAMENTO</h3>
-                
-                <div class="checkbox-group horario">
-                    <div class="checkbox-item horario-container">
-                        <div class="checkbox-horario">
-                            <input type="checkbox" id="entradaAtrasada" name="horario" value="entrada-atrasada">
-                            <label for="entradaAtrasada">Entrada com Atraso</label>
-                        </div>
-                        <input type="time" id="horarioEntrada" name="horarioEntrada" class="time-input" placeholder="Selecione o horário">
-                    </div>
-                    
-                    <div class="checkbox-item horario-container">
-                        <div class="checkbox-horario">
-                            <input type="checkbox" id="saidaAntecipada" name="horario" value="saida-antecipada">
-                            <label for="saidaAntecipada">Saída Antecipada</label>
-                        </div>
-                        <input type="time" id="horarioSaida" name="horarioSaida" class="time-input" placeholder="Selecione o horário">
-                    </div>
-                </div>
-
-                <div class="checkbox-group motivos">
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="resolverAssuntos" name="motivo" value="resolver-assuntos">
-                        <label for="resolverAssuntos">Resolver Assuntos Fora de Sala</label>
-                    </div>
-                    
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="semUniforme" name="motivo" value="sem-uniforme">
-                        <label for="semUniforme">Sem Uniforme</label>
-                    </div>
-                    
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="motivosPessoais" name="motivo" value="motivos-pessoais">
-                        <label for="motivosPessoais">Motivos Pessoais/Outros</label>
-                        <textarea id="motivosPessoaisTexto" name="motivosPessoaisTexto" class="text-input" style="display:none;"></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <button type="button" id="gerarEncaminhamento" class="btn-gerar">Gerar Encaminhamento</button>
-        </form>
+    <link rel="stylesheet" href="encaminhamento.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>SENAI 302 - DIMP</h1>
+      <a href="#" class="inicio">Início</a>
     </div>
 
+    <section>
+      <div class="container">
+        <div class="fortnite">
+          <h1>Encaminhamento</h1>
+        </div>
+
+        <form id="encaminhamentoForm">
+          <div class="form-group">
+            <label for="nome">NOME DO(A) ALUNO(A):</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+
+          <div class="form-group">
+            <label for="turma">TURMA:</label>
+            <input type="text" id="turma" name="turma" />
+          </div>
+
+          <div class="form-group">
+            <label for="nascimento">DATA DE NASCIMENTO:</label>
+            <input
+              type="date"
+              id="nascimento"
+              name="nascimento"
+              place1older="Se for de menor"
+              title="Se for de menor"
+            />
+          </div>
+
+          <div class="form-group motivo-encaminhamento">
+            <h3>MOTIVO DO ENCAMINHAMENTO</h3>
+
+            <div class="checkbox-group horario">
+              <div class="checkbox-item horario-container">
+                <div class="checkbox-horario">
+                  <input
+                    type="checkbox"
+                    id="entradaAtrasada"
+                    name="horario"
+                    value="entrada-atrasada"
+                  />
+                  <label for="entradaAtrasada">Entrada com Atraso</label>
+                </div>
+                <input
+                  type="time"
+                  id="horarioEntrada"
+                  name="horarioEntrada"
+                  class="time-input"
+                  placeholder="Selecione o horário"
+                />
+              </div>
+
+              <div class="checkbox-item horario-container">
+                <div class="checkbox-horario">
+                  <input
+                    type="checkbox"
+                    id="saidaAntecipada"
+                    name="horario"
+                    value="saida-antecipada"
+                  />
+                  <label for="saidaAntecipada">Saída Antecipada</label>
+                </div>
+                <input
+                  type="time"
+                  id="horarioSaida"
+                  name="horarioSaida"
+                  class="time-input"
+                  placeholder="Selecione o horário"
+                />
+              </div>
+            </div>
+
+            <div class="checkbox-group motivos">
+              <div class="checkbox-item">
+                <div class="checkbox-align">
+                  <input
+                    type="checkbox"
+                    id="resolverAssuntos"
+                    name="motivo"
+                    value="resolver-assuntos"
+                  />
+                  <label for="resolverAssuntos"
+                    >Resolver Assuntos Fora de Sala</label
+                  >
+                </div>
+              </div>
+
+              <div class="checkbox-item">
+                <div class="checkbox-align">
+                  <input
+                    type="checkbox"
+                    id="semUniforme"
+                    name="motivo"
+                    value="sem-uniforme"
+                  />
+                  <label for="semUniforme">Sem Uniforme</label>
+                </div>
+              </div>
+
+              <div class="checkbox-item">
+                <div class="checkbox-align">
+                  <input
+                    type="checkbox"
+                    id="motivosPessoais"
+                    name="motivo"
+                    value="motivos-pessoais"
+                  />
+                  <label for="motivosPessoais">Motivos Pessoais/Outros</label>
+                </div>
+              </div>
+              <div>
+                <textarea
+                  id="motivosPessoaisTexto"
+                  name="motivosPessoaisTexto"
+                  class="text-input"
+                  style="display: none"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" id="gerarEncaminhamento" class="btn-gerar">
+            Gerar Encaminhamento
+          </button>
+        </form>
+      </div>
+    </section>
+
     <script src="encaminhamento.js"></script>
-</body>
+  </body>
 </html>
