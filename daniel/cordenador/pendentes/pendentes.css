@@ -106,6 +106,19 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+a,
+a:visited,
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e8f0fe; /* ou outro tom mais claro se quiser efeito no hover */
+  text-decoration: none;
+}
+
+
 /* Botões */
 .btn-logout {
   padding: 10px 20px;
