@@ -1,52 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENAI Dashboard</title>
-    <link rel="stylesheet" href="main_aqv.css">
-</head>
-<body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SENAI Encaminhamento</title>
+    <link rel="stylesheet" href="main_aqv.css" />
+    <script src="algo.js"></script>
+  </head>
+  <body>
     <div class="senia">
-        <!-- Barra SENAI -->
-        <div class="senai-bar">
-            <div class="senai-title">SENAI 302 DIMP</div>
-            <div class="notification-icon">
-            </div>
+      <div class="senai-bar">
+        <div class="senai-title">SENAI ENCAMINHAMENTO</div>
+      </div>
+      
+      <main class="main-content">
+        <div class="welcome-section">
+          <h1 class="welcome-text">Bem-vindo, <span id="userName">Usuário</span>!</h1>
         </div>
         
-        <!-- Conteúdo Principal -->
-        <div class="main-content">
-            <!-- Saudação -->
-            <div class="welcome-section">
-                <h2 class="welcome-text">Bem vindo, <span id="userName">Exemplo</span>!</h2>
-            </div>
-            
-            <!-- Área de conteúdo vazia - será preenchida por outras telas -->
-            <div class="content-area">
-                <!-- Conteúdo dinâmico virá aqui -->
-            </div>
-        </div>
-        
-        <!-- Botões de navegação -->
-        <div class="navigation-buttons">
-            <button 
-                id="pendingButton"
-                class="nav-button pendentes-button"
-            >
-                <span class="button-text">Pendentes</span>
-                <span class="count-badge" id="pendingCount">99</span>
+        <div class="content-area">
+          <!-- Área principal de conteúdo -->
+          <div class="navigation-buttons">
+            <button id="pendingButton" class="nav-button">
+              <span class="button-text">PENDENTES</span>
+              <span class="count-badge" id="pendingCount">99</span>
             </button>
             
-            <button 
-                id="completedButton"
-                class="nav-button completed-button"
-            >
-                <span class="button-text">Encerrados</span>
+            <button id="completedButton" class="nav-button">
+              <span class="button-text">ENCERRADOS</span>
+              <span class="count-badge">0</span>
             </button>
+          </div>
         </div>
+      </main>
     </div>
-
-    <script src="script.js"></script>
-</body>
+  </body>
 </html>
