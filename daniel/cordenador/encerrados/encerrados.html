@@ -3,25 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard - Encerrados</title>
-    <link rel="stylesheet" href="encerrados.css" />
-    <script src="script.js"></script>
+    <title>Encerrados</title>
+    <link rel="stylesheet" href="./encerrados.css" />
+    <script src="../tela_principal/algo.js"></script>
   </head>
   <body>
     <div class="app">
       <nav class="navbar">
         <div class="navbar-brand">
-          <a href="index.html">SENAI encaminhamento</a>
+          <a href="C:\Users\Aluno\Desktop\daniel\daniel\cordenador\tela_principal\main.html">SENAI encaminhamento</a>
         </div>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">Início</a>
+            <a href="../pendentes/pendentes.html">Pendentes</a>
+
           </li>
           <li class="nav-item">
-            <a href="dashboard.html" class="nav-link">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a href="pendentes.html" class="nav-link">Pendentes</a>
+            <a href="../tela_principal/main.html">Início</a>
           </li>
         </ul>
       </nav>
@@ -34,11 +32,11 @@
           <div class="dashboard-content">
             <div id="loading">Carregando dados...</div>
             <div id="dataContent" style="display: none">
-              <div class="encerred-title">
-                <h1 class="title-encerred">Encerrado</h1>
+              <div class="pending-title">
+                <h1 class="title-pendente">Pendente</h1>
               </div>
               <div class="container">
-                <!-- Seção de Encaminhamentos - Apenas encerrados -->
+                <!-- Seção de Encaminhamentos Pendentes -->
                 <div class="table-section">
                   <div
                     class="table-header toggle-header"
@@ -46,7 +44,7 @@
                   >
                     <button
                       class="header-content"
-                      onclick="toggleSection('encaminhamentos-section')"
+                      onclick="toggleSection('encaminhamentos-pendentes-section')"
                     >
                       ENCAMINHAMENTO
                       <span class="toggle-icon">▼</span>
@@ -57,25 +55,28 @@
                         type="text"
                         placeholder="Pesquisar"
                         class="search-input"
-                        id="search-encaminhamento"
+                        id="search-encaminhamento-pendentes"
                         onclick="event.stopPropagation()"
                       />
                       <div class="search-icon"></div>
                     </div>
                   </div>
-                  <div class="table-content" id="encaminhamentos-section">
-                    <div class="content" id="encaminhamentos-content">
+                  <div
+                    class="table-content"
+                    id="encaminhamentos-pendentes-section"
+                  >
+                    <div class="content" id="encaminhamentos-pendentes-content">
                       <!-- Conteúdo será inserido via JavaScript -->
                     </div>
                   </div>
                 </div>
 
-                <!-- Seção de FIAP - Apenas encerrados -->
+                <!-- Seção de FIAP Pendentes -->
                 <div class="table-section">
                   <div class="table-header toggle-header" data-target="fiap">
                     <button
                       class="header-content"
-                      onclick="toggleSection('fiap-section')"
+                      onclick="toggleSection('fiap-pendentes-section')"
                     >
                       FIAP
                       <span class="toggle-icon">▼</span>
@@ -86,14 +87,14 @@
                         type="text"
                         placeholder="Pesquisar"
                         class="search-input"
-                        id="search-fiap"
+                        id="search-fiap-pendentes"
                         onclick="event.stopPropagation()"
                       />
                       <div class="search-icon"></div>
                     </div>
                   </div>
-                  <div class="table-content" id="fiap-section">
-                    <div class="content" id="fiap-content">
+                  <div class="table-content" id="fiap-pendentes-section">
+                    <div class="content" id="fiap-pendentes-content">
                       <!-- Conteúdo será inserido via JavaScript -->
                     </div>
                   </div>
