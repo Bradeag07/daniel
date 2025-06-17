@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+ a {
+  color: white;
+  text-decoration: none; 
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -21,7 +26,7 @@ html, body {
   background-color: #f0f0f0;
   position: relative;
   font-family: Arial, sans-serif;
-  overflow-x: hidden; /* Previne scrollbar horizontal em alguns casos */
+  overflow-x: hidden; 
 }
 
 /* Cabeçalho AQV */
@@ -35,7 +40,7 @@ html, body {
 
 /* Barra SENAI */
 .senai-bar {
-  background-color: #004aad; /* Azul forte como na imagem */
+  background-color: #004aad; 
   color: white;
   padding: 16px;
   display: flex;
@@ -51,14 +56,13 @@ html, body {
 
 /* Conteúdo Principal */
 .main-content {
-  border: 2px solid #800080; /* Borda roxa */
   margin: 16px 20px;
   padding: 16px;
-  flex: 1; /* Faz com que o conteúdo ocupe todo o espaço disponível */
+  flex: 1; 
   background-color: white;
   position: relative;
   display: flex;
-  flex-direction: column; /* Garante que os elementos internos fiquem em coluna */
+  flex-direction: column;
 }
 
 .welcome-section {
@@ -78,12 +82,28 @@ html, body {
 
 /* Botões de navegação - TAMANHO AJUSTADO */
 .navigation-buttons {
-  position: absolute;
-  left: 0;
-  top: 240px;
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
+  height: calc(100% - 50px);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+#pendingButton { 
+  grid-area: 2 / 2 / 3 / 3; 
+}
+
+#completedButton { 
+  grid-area: 2 / 4 / 3 / 5; 
+}
+
+#encaminhamentoButton { 
+  grid-area: 4 / 2 / 5 / 3; 
+}
+
+#fiapButton {
+  grid-area: 4 / 4 / 5 / 5; 
 }
 
 .nav-button {
@@ -92,50 +112,25 @@ html, body {
   background-color: #004aad; /* Azul forte como na barra SENAI */
   color: white;
   padding: 10px 30px 10px 24px;
-  margin-bottom: 15px;
   border: none;
   position: relative;
   cursor: pointer;
-  width: 240px;
-  height: 50px;
-  text-align: left;
+  width: 100%;
+  height: 100%;
+  text-align: center;
   font-size: 16px;
-  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+  border-radius: 8px;
+  justify-content: center;
   transition: background-color 0.3s ease; /* Adiciona transição suave para efeitos hover */
+}
+
+.pendinButton {
+  margin: 500px
 }
 
 /* Adiciona efeito hover para melhor feedback visual */
 .nav-button:hover {
   background-color: #0055cc;
-}
-
-.button-text {
-  margin-right: 30px;
-  font-weight: 500;
-}
-
-.count-badge {
-  position: absolute;
-  right: 40px;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-/* Setas apontando para os botões */
-.navigation-buttons::before {
-  content: "→";
-  position: absolute;
-  left: -20px;
-  top: 10px;
-  font-size: 20px;
-}
-
-.navigation-buttons::after {
-  content: "→";
-  position: absolute;
-  left: -20px;
-  top: 58px; /* Ajustado para a segunda seta */
-  font-size: 20px;
 }
 
 /* Mantém o tamanho dos botões consistentes em diferentes telas */
@@ -165,8 +160,4 @@ html, body {
     clip-path: none; 
   }
   
-  .navigation-buttons::before,
-  .navigation-buttons::after {
-    display: none; /* Remove as setas em telas menores */
-  }
 }

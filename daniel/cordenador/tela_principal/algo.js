@@ -17,32 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         pendingCountElement.textContent = pendingCount;
     }
 
-    // Botões da página principal (main.html)
-    const pendingButton = document.getElementById('pendingButton');
-    const completedButton = document.getElementById('completedButton');
-
-    if (pendingButton) {
-        pendingButton.addEventListener('click', function() {
-            // Redireciona para pendentes.html dentro da pasta pendentes
-            window.location.href = '../pendentes/pendentes.html';
-        });
-    }
-
-    if (completedButton) {
-        completedButton.addEventListener('click', function() {
-            // Redireciona para encerrados.html dentro da pasta encerrados
-            window.location.href = '../encerrados/encerrados.html';
-        });
-    }
-
-    // Botão de Logout
-    const logoutBtn = document.getElementById('logoutBtn');
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', function() {
-            // Volta para a tela principal
-            window.location.href = './main.html';
-        });
-    }
+ 
 });
 
 // Função para expandir/recolher seções
