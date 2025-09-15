@@ -1,0 +1,32 @@
+li, a, button{
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  background: linear-gradient(90deg, #1a3b8c 0%, #254ebd 100%);
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+.logotipo{
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links{
+  list-style: none;
+}
+
+.nav-links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a:hover{
+  color: #00ccffc0;
+}

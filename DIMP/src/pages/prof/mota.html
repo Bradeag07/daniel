@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SENAI 302 DIMP - Professor</title>
+    <link rel="stylesheet" href="paulo.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+  </head>
+  <body>
+    <header>
+        <span class="logotipo">SENAI 302 DIMP</span>
+    </header>
+
+    <main>
+      <div class="dashboard-container">
+        <div class="welcome-section">
+          <h2>Bem vindo, Exemplo!</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="buttons-container">
+          <div class="button-group">
+            <p>Gerar FIAP</p>
+            <a href="../gerar_fiap/fiap.html">
+            <button id="gerarFiapBtn" class="circle-button">
+              <div class="plus-icon">+</div>
+              <div class="fiap-icon">
+                <img src="../../assets/imgs/papel.svg" alt="encaminhamento" />
+              </div>
+            </button>
+            </a>
+          </div>
+
+          <div class="button-group">
+            <p>Gerar Encaminhamento</p>
+            <a href="../gerar_encaminhamento/encaminhamento.html">
+            <button id="gerarEncaminhamentoBtn" class="circle-button">
+              <div class="plus-icon">+</div>
+              <div class="encaminhamento-icon">
+                <img src="../../assets/imgs/papel.svg" alt="encaminhamento" />
+              </div>
+            </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table id="pedidosTable">
+            <thead>
+              <tr>
+                <th>Pedido</th>
+                <th>Aluno</th>
+                <th>Turma</th>
+                <th>Data</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>FIAP</td>
+                <td>nicolas bota</td>
+                <td>ADS1</td>
+                <td>amanha</td>
+                <td>Encerrado</td>
+              </tr>
+              <tr>
+                <td>Encaminhamento</td>
+                <td>poavio</td>
+                <td>oi</td>
+                <td>ontem</td>
+                <td>Pendente</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <script src="igor.js"></script>
+  </body>
+</html>
